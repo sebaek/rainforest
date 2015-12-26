@@ -1,6 +1,11 @@
 package com.rainforest.entities;
 
 public class User {
+	private boolean isMatched = false;
+	private	int seq;
+	private int matchedSeq; 
+	private boolean isOut = false;
+	
 	private String nickName;
 	private String gender;
 	private String hobby;
@@ -29,7 +34,35 @@ public class User {
 	public void setCity(String city) {
 		this.city = city;
 	}
-	
-	
-
+	public boolean isMatched() {
+		return isMatched;
+	}
+	public void setMatched(boolean isMatched) {
+		this.isMatched = isMatched;
+	}
+	public int getSeq() {
+		return seq;
+	}
+	public void setSeq(int seq) {
+		this.seq = seq;
+	}
+	public int getMatchedSeq() {
+		return matchedSeq;
+	}
+	public void setMatchedSeq(int matchedSeq) {
+		this.matchedSeq = matchedSeq;
+	}
+	public boolean isOut() {
+		return isOut;
+	}
+	public void setOut(boolean isOut) {
+		this.isOut = isOut;
+	}
+	@Override
+	public String toString() {
+		return "{\"isMatched\":\"" + isMatched + "\", \"seq\":\"" + seq
+				+ "\", \"matchedSeq\":\"" + matchedSeq + "\", \"isOut\":\"" + isOut
+				+ "\", \"nickName\":\"" + nickName + "\", \"gender\":\"" + gender + "\", \"hobby\":\""
+				+ hobby + "\", \"city\":\"" + city + "\"}";
+	}
 }
